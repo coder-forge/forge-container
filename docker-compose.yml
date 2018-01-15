@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+
+  forge:
+    image: atmoz/sftp
+    volumes:
+      - /host/upload:/home/foo/upload
+    ports:
+      - "2222:22"
+    command: foo:pass:1001
