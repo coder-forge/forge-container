@@ -5,7 +5,6 @@ services:
   forge:
     image: atmoz/sftp
     volumes:
-      - /host/upload:/home/foo/upload
+      - ./conf/users.conf:/etc/sftp/users.conf:ro
     ports:
       - "2222:22"
-    command: foo:pass:1001
