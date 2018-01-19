@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
-CMD ["nginx", "-g", "daemon off;"]
+nginx -g 'daemon off;' &
 /entrypoint

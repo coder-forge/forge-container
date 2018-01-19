@@ -104,7 +104,7 @@ function createUser() {
             if [ ! -d "$dirPath" ]; then
                 log "Creating directory: $dirPath"
                 mkdir -p $dirPath
-                chown -R $uid:users $dirPath
+                chown -R $uid:nginx $dirPath
             else
                 log "Directory already exists: $dirPath"
             fi
