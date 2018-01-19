@@ -3,8 +3,9 @@ version: '3'
 services:
 
   forge:
-    image: atmoz/sftp
+    build: .
     volumes:
-      - ./conf/users.conf:/etc/sftp/users.conf:ro
+      - ./config/users.conf:/etc/sftp/users.conf:ro
     ports:
       - "2222:22"
+      - "80:80"
